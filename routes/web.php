@@ -32,7 +32,7 @@ Route::get('/', [HomeController::class, 'home'])->name('home.index');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/single', AboutController::class)->name('home.about');
 
-Route::resource('posts', PostsController::class)->only(['index', 'show']);
+Route::resource('posts', PostsController::class);
 
 /*Route::get('/posts/', function() use ($posts) {
     return view('posts.index', ['posts' => $posts]);
